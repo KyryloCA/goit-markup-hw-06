@@ -28,6 +28,51 @@
                     <use href="images/symbol-defs.svg#close-cross"></use>
                 </svg>
             </div>
+            <form class="form-modal js-speaker-form">
+                <h2>Оставьте свои данные, мы вам перезвоним</h2>
+                <label>
+                    <span class="form-input-name">Имя</span>
+
+                    <input type="text" name="form-name" placeholder=" " class="input-text">
+                    <svg width="18px" height="18px" fill="currentColor" aria-hidden="true">
+                        <use href="images/symbol-defs.svg#form-human"></use>
+                    </svg>
+                </label>
+                <label>
+                    <span class="form-input-name">Телефон</span>
+                    <input type="tel" name="form-phone" class="input-text" placeholder=" ">
+                    <svg width="18px" height="18px" fill="currentColor" aria-hidden="true">
+                        <use href="images/symbol-defs.svg#form-phone"></use>
+                    </svg>
+                </label>
+                <label>
+                    <span class="form-input-name">Почта</span>
+                    <input type="email" name="form-mail" class="input-text" placeholder=" ">
+                    <svg width="18px" height="18px" fill="currentColor" aria-hidden="true">
+                        <use href="images/symbol-defs.svg#form-envelope"></use>
+                    </svg>
+                </label>
+                <label>
+                    <span>Комментарий</span><textarea type="text" name="form-comment" class="input-text comment"
+                        placeholder="Введите текст"></textarea>
+                </label>
+                <label class="consent">
+                    <input type="checkbox" name="form-consent" value="true" class="visually-hidden">
+                    <svg class="icon form-checkbox unchecked" fill="currentColor" aria-hidden="true">
+                        <use href="images/symbol-defs.svg#form-icon-uncheck"></use>
+                    </svg>
+                    <svg class="icon form-checkbox checked" fill="currentColor" aria-hidden="true">
+                        <use href="images/symbol-defs.svg#form-icon-check"></use>
+                    </svg>
+
+                    <span>Соглашаюсь с рассылкой и принимаю</span> <a href="">Условия договора</a>
+                </label>
+                <label class="button ">
+                    <button class="button primary subscribe-action" type="submit">Отправить</button>
+
+
+                </label>
+            </form>
         </div>
     </div>
     <!-- конец модального окна -->
@@ -391,9 +436,40 @@
 
                 </ul>
             </div>
+            <div class="wrapper subscribe">
+                <h2>Подпишитесь на рассылку</h2>
+                <form class="js-speaker-form">
+                    <label class="mail">
+                        <input type="email" name="subscribe-email" placeholder="E-mail">
+                    </label>
+                    <label class="button">
+                        <button class="button primary subscribe-action"><span>Подписаться</span><svg class="icon"
+                                aria-hidden="true" width="32px" height="32px">
+                                <use href="images/symbol-defs.svg#icon-send"></use>
+                            </svg></button>
+
+
+                    </label>
+                </form>
+            </div>
         </div>
     </footer>
     <script src="js/modal.js"></script>
+
+    <script>
+        (() => {
+            document.querySelector('.js-speaker-form').addEventListener('submit', e => {
+                e.preventDefault();
+
+                new FormData(e.currentTarget).forEach((value, name) =>
+                    console.log(`${name}: ${value}`),
+                );
+
+                e.currentTarget.reset();
+            });
+        })();
+    </script>
 </body>
+
 
 </html>

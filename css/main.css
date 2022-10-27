@@ -825,6 +825,79 @@ footer .socials .icon {
     margin-bottom: 0;
 } */
 
+/* --------footer-subscribe------ */
+footer .subscribe {
+    margin-left: 93px;
+}
+
+.subscribe form {
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+
+.subscribe .mail {
+    display: flex;
+    align-items: center;
+
+    padding-left: 15px;
+    padding-right: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+
+    width: 358px;
+    height: 100%;
+    margin-right: 12px;
+}
+
+.subscribe .mail input {
+    line-height: 20px;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.6);
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.subscribe .mail input:focus {
+    color: var(--primary-bg-color);
+}
+
+.subscribe .mail input:not(:placeholder-shown) {
+    color: var(--primary-bg-color);
+}
+
+.subscribe .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 100%;
+
+}
+
+.subscribe .button:hover,
+.subscribe .button:focus {
+    background-color: var(--hero-button-color-accent);
+}
+
+
+
+
+.subscribe .button svg {
+    padding-left: 10px;
+    fill: var(--primary-bg-color);
+}
+
+
+
+
+
+/* --------END---OF---Footer-subscribe------ */
+
 
 /* ------------modal window----------- */
 
@@ -857,6 +930,7 @@ footer .socials .icon {
     background-color: var(--primary-bg-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
+    padding: 40px;
 }
 
 .backdrop.is-hidden .modal {
@@ -892,6 +966,151 @@ footer .socials .icon {
 .button-close-cross .icon {
     display: block;
     fill: #000000;
+}
+
+.form-modal {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.form-modal label {
+    font-size: 14px;
+    position: relative;
+}
+
+
+
+.form-modal a {
+    color: var(--hero-button-color);
+}
+
+.form-modal .consent span {
+    font-size: 14px;
+    padding-left: 36px;
+}
+
+
+.form-modal .form-checkbox {
+    fill: var(--secondary-content-color);
+    position: absolute;
+    width: 16px;
+    height: 15px;
+    margin-left: 12px;
+}
+
+
+
+
+.form-modal h2 {
+    margin-top: 0;
+    margin-bottom: 12px;
+
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--secondary-content-color);
+}
+
+.form-modal label {
+    margin-bottom: 10px;
+}
+
+
+.form-modal input:hover,
+.form-modal input:focus,
+.form-modal textarea:hover,
+.form-modal textarea:focus {
+    border-color: var(--accent-color);
+
+}
+
+.form-modal input:hover~svg,
+.form-modal input:focus~svg,
+.form-modal textarea:hover~svg,
+.form-modal textarea:focus~svg {
+    fill: var(--accent-color);
+
+}
+
+.form-modal .input-text {
+
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 42px;
+    padding-right: 12px;
+
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    transition: border-color var(--cubic-function);
+}
+
+
+.form-modal .input-text.comment {
+    resize: none;
+    width: 100%;
+    height: 120px;
+    padding-left: 16px;
+    padding-right: 16px;
+    transition: border-color var(--cubic-function);
+}
+
+.form-modal span {
+    font-size: 12px;
+    margin-bottom: 4px;
+}
+
+.form-modal .consent {
+    margin-bottom: 30px;
+}
+
+.consent input[type="checkbox"]:focus~svg,
+.consent input[type="checkbox"]:hover~svg {
+    fill: var(--accent-color);
+    cursor: pointer;
+}
+
+.consent input[type="checkbox"]:not(:checked)~.checked {
+    opacity: 0;
+    transition: opacity var(--cubic-function);
+}
+
+.consent input[type="checkbox"]:checked~.checked {
+    opacity: 1;
+}
+
+
+.form-modal .button {
+    width: 200px;
+    height: 50px;
+    align-self: center;
+
+    font-size: 16px;
+    font-weight: 700;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    background-color: var(--hero-button-color);
+
+}
+
+.form-modal .button:hover,
+.form-modal .button:focus {
+    background-color: var(--hero-button-color-accent);
+}
+
+.form-input-name~svg {
+    position: absolute;
+    left: 12px;
+    bottom: 11px;
+    width: 18px;
+    height: 18px;
+
+    fill: var(--secondary-content-color);
+    transition: fill var(--cubic-function);
 }
 
 
