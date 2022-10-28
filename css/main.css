@@ -713,7 +713,8 @@ footer .container {
     align-items: baseline;
 }
 
-footer h2 {
+footer b {
+    display: block;
     text-transform: uppercase;
     font-size: 14px;
     font-weight: 700;
@@ -721,6 +722,8 @@ footer h2 {
     margin-bottom: 20px;
 
     color: var(--primary-bg-color);
+
+
 }
 
 footer .logo {
@@ -837,8 +840,17 @@ footer .subscribe {
 }
 
 .subscribe .mail {
-    display: flex;
-    align-items: center;
+    width: 358px;
+    height: 100%;
+    margin-right: 12px;
+    /* background-color: yellow; */
+}
+
+.subscribe .mail input {
+    display: block;
+    background-color: transparent;
+    height: 100%;
+    width: 100%;
 
     padding-left: 15px;
     padding-right: 15px;
@@ -846,28 +858,23 @@ footer .subscribe {
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
 
-    width: 358px;
-    height: 100%;
-    margin-right: 12px;
-}
-
-.subscribe .mail input {
     line-height: 20px;
     font-size: 16px;
     color: rgba(255, 255, 255, 0.6);
-    background-color: transparent;
-    border: none;
-    padding: 0;
-    margin: 0;
-    width: 100%;
+
+    transition: color var(--cubic-function), border-color var(--cubic-function);
+
 }
 
-.subscribe .mail input:focus {
+.subscribe .mail input:focus,
+.subscribe .mail input:hover {
     color: var(--primary-bg-color);
+    border: 1px solid var(--accent-color);
 }
 
 .subscribe .mail input:not(:placeholder-shown) {
     color: var(--primary-bg-color);
+    border: 1px solid var(--accent-color);
 }
 
 .subscribe .button {
@@ -968,6 +975,7 @@ footer .subscribe {
     fill: #000000;
 }
 
+/* -------------Form-of-modal-window----------- */
 .form-modal {
     display: flex;
     flex-direction: column;
@@ -977,8 +985,13 @@ footer .subscribe {
 .form-modal label {
     font-size: 14px;
     position: relative;
+    margin-bottom: 10px;
 }
 
+
+.form-modal .coments {
+    margin-bottom: 20px;
+}
 
 
 .form-modal a {
@@ -1002,7 +1015,8 @@ footer .subscribe {
 
 
 
-.form-modal h2 {
+.modal p {
+
     margin-top: 0;
     margin-bottom: 12px;
 
@@ -1011,10 +1025,6 @@ footer .subscribe {
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--secondary-content-color);
-}
-
-.form-modal label {
-    margin-bottom: 10px;
 }
 
 
@@ -1061,6 +1071,7 @@ footer .subscribe {
 }
 
 .form-modal span {
+    display: inline-block;
     font-size: 12px;
     margin-bottom: 4px;
 }
@@ -1094,6 +1105,7 @@ footer .subscribe {
     font-weight: 700;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     background-color: var(--hero-button-color);
+    margin-bottom: 0;
 
 }
 
